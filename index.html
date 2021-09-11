@@ -23,6 +23,12 @@
 	
     <!-- FontAwesomeの読み込み -->
 　　<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+
+    <!-- Tempus Dominus CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0/css/tempusdominus-bootstrap-4.min.css" />
+	
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
 	
 </head>
 
@@ -254,18 +260,55 @@
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="h5 mb-0 font-weight-bold text-primary text-uppercase mb-3">
-                                                URLを入力 または 日付を選択してください</div>
+                                                URLを入力 または 日付を選択 してください</div>
 						
                                             <div class="text-tx font-weight-bold text-gray-800">URLを入力</div>
-						<div class="input-group mb-3">
+						<div class="input-group1 mb-3">
 						<input type="text" class="form-control" placeholder="URLを入力" aria-label="URLを入力" aria-describedby="button-addon2">
 							<div class="input-group-append">
 							<button class="btn btn-outline-secondary" type="button" id="button-addon2">決定</button>
 							</div>
 						</div>
 						
-                                            <div class="text-tx font-weight-bold text-gray-800">URLを入力</div>						
-						
+					    	<div class="input-group2 mb-3">						
+                                            	<div class="text-tx font-weight-bold text-gray-800">日付を選択</div>
+								
+							<div class="container">
+							<div class="row mt-5">
+							  <div class="col-3  mt-5">
+							    <div class="form-group">
+							      <div class="input-group date" id="datePicker" data-target-input="nearest">
+								<label for="datePicker" class="pt-1 pr-2">日付:</label>
+								<input type="text" class="form-control form-control-sm datetimepicker-input" data-target="#datePicker"/>
+								<div class="input-group-append" data-target="#datePicker" data-toggle="datetimepicker">
+								  <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+								</div>
+							      </div>
+							    </div>
+							  </div>
+							</div>
+							<div class="row">
+							  <div class="col-3">
+							    <div class="form-group">
+							      <div class="input-group date" id="timePicker" data-target-input="nearest">
+								<label for="timePicker" class="pt-1 pr-2">時間:</label>
+								<input type="text" class="form-control form-control-sm datetimepicker-input" data-target="#timePicker"/>
+								<div class="input-group-append" data-target="#timePicker" data-toggle="datetimepicker">
+								  <div class="input-group-text"><i class="fa fa-clock"></i></div>
+								</div>
+							      </div>
+							    </div>
+							  </div>
+							</div>
+							</div>
+							
+							<script type="text/javascript">
+							  $(function () {
+							    $('#datePicker').datetimepicker({locale: 'ja', dayViewHeaderFormat: 'YYYY年M月' ,format: 'YYYY/MM/DD'});
+							    $('#timePicker').datetimepicker({locale: 'ja', format: 'HH:mm'});
+							  });
+							</script>
+						</div>						
 					
                                         </div>
            
@@ -553,7 +596,7 @@
             </div>
         </div>
     </div>
-https://ibmkeiba.github.io/webdesign/
+
     <!-- Bootstrap core JavaScript-->
     <script src="https://ibmkeiba.github.io/webdesign/jquery.min.js"></script>
     <script src="https://ibmkeiba.github.io/webdesign/bootstrap.bundle.min.js"></script>
@@ -570,6 +613,13 @@ https://ibmkeiba.github.io/webdesign/
     <!-- Page level custom scripts -->
     <script src="https://ibmkeiba.github.io/webdesign/chart-area-demo.js"></script>
     <script src="https://ibmkeiba.github.io/webdesign/chart-pie-demo.js"></script>
+
+    <!-- Tempus Dominus Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js" integrity="sha512-rmZcZsyhe0/MAjquhTgiUcb4d9knaFc7b5xAfju483gbEXTkeJRUMIPk6s3ySZMYUHEcjKbjLjyddGWMrNEvZg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/locale/ja.min.js" integrity="sha512-rElveAU5iG1CzHqi7KbG1T4DQIUCqhitISZ9nqJ2Z4TP0z4Aba64xYhwcBhHQMddRq27/OKbzEFZLOJarNStLg==" crossorigin="anonymous"></script>
+	    
+    <!-- Moment.js -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0/js/tempusdominus-bootstrap-4.min.js"></script>
 
 </body>
 
