@@ -57,4 +57,12 @@ var_dump($resJsonUser);
 　
 // DB登録処理とか
 
+//  APIでユーザのEmail情報を取得
+$resultEmail   = httpRequest('get', "https://api.github.com/user/emails", null, ["Authorization: Token " . "アクセストークン"]);
+ 
+// 返却地をJsonでデコード
+$resJsonEmails = json_decode($resultEmail, true);
+　
+echo $resJsonEmails[0]['email'];
+
 
