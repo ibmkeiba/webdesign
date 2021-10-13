@@ -30,6 +30,11 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
 	
+　　<!-- bootstrap-datepickerを読み込む -->
+　　<link rel="stylesheet" type="text/css" href="https://ibmkeiba.github.io/webdesign/bootstrap-datepicker.min.css">
+　　<script type="text/javascript" src="https://ibmkeiba.github.io/webdesign/bootstrap-datepicker.min.js"></script>
+　　<script type="text/javascript" src="https://ibmkeiba.github.io/webdesign/bootstrap-datepicker.ja.min.js"></script>
+	
 </head>
 
 <body id="page-top">
@@ -223,8 +228,40 @@
 
                     <!-- Content Row -->
 					<div class="row">
+						<!-- input Card  -->
+							<div class="col-xl-12 col-md-12 mb-5">
+								<div class="card border-left-primary shadow h-100 w-100 py-2">
+									<div class="card-body">
+										<div class="row no-gutters align-items-center">
 
-						<!-- input Card Example -->
+											<div class="col mr-2">
+												<div class="h5 mb-0 font-weight-bold text-primary text-uppercase mb-3">
+												日付 場所 レースの選択
+												</div>
+
+												<label class="form-check-label font-weight-bold text-gray-800" for="flexRadioDefault1">日付の選択</label>
+												<div class="container">
+													<div class="input-group mb-3 col-9 ">
+													<input type="text-left" class="form-control" placeholder="日付の選択" aria-label="日付の選択" id="sample1" >
+													</div>
+												</div>
+
+												<label class="form-check-label font-weight-bold text-gray-800" for="flexRadioDefault1">日付の選択</label>
+													<div class="input-group mb-3 col-9">
+													<input type="text-left" class="form-control" placeholder="URLを入力" aria-label="URLを入力" aria-describedby="button-addon2">
+														<div class="input-group-append">
+														<button class="btn btn-outline-secondary" type="button" id="button-addon2">決定</button>
+														</div>
+													</div>
+
+											</div>
+
+										</div>
+									</div>
+								</div>
+							</div>
+						
+						<!-- input Card calender -->
 							<div class="col-xl-12 col-md-12 mb-5">
 								<div class="card border-left-primary shadow h-100 w-100 py-2">
 									<div class="card-body">
@@ -332,7 +369,14 @@
 	    
     <!-- Moment.js -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0/js/tempusdominus-bootstrap-4.min.js"></script>
-		
+
+    <!-- bootstrap-datepickerのjavascriptコード -->
+	<script>
+	    $('#sample1').datepicker({
+		language:'ja'
+		format: 'yyyy/mm/dd'
+	    });
+	</script>
    
 
 </body>
