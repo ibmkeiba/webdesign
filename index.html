@@ -31,9 +31,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
 
 　　<!-- bootstrap-datepickerを読み込む -->
-　　<link rel="stylesheet" type="text/css" href="https://ibmkeiba.github.io/webdesign/bootstrap-datepicker.min.css">
-　　<script type="text/javascript" src="https://ibmkeiba.github.io/webdesign/bootstrap-datepicker.min.js"></script>
-　　<script type="text/javascript" src="https://ibmkeiba.github.io/webdesign/bootstrap-datepicker.ja.min.js"></script>
+　　<link rel="stylesheet" href="https://ibmkeiba.github.io/webdesign/bootstrap-datepicker.min.css">
 	
 </head>
 
@@ -242,8 +240,7 @@
 												<label class="form-check-label font-weight-bold text-gray-800" for="flexRadioDefault1">日付の選択</label>
 												<div class="container">
 													<div class="input-group mb-3 col-9">
-														<input type="text-left" class="form-control" id="text" placeholder="日付の選択">
-														<class="form-control" input type="text" id="sample1">
+														<input type="text-left" class="form-control" id="text" name="date" type="date">
 													</div>
 												</div>
 
@@ -372,9 +369,11 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tempusdominus-bootstrap-4/5.0.0/js/tempusdominus-bootstrap-4.min.js"></script>
 
     <!-- bootstrap-datepickerのjavascriptコード -->
-	<script>
-	    $('#sample1').datepicker();
-	</script>
+    <script src="https://ibmkeiba.github.io/webdesign/bootstrap-datepicker.min.js"></script>
+    <script src="https://ibmkeiba.github.io/webdesign/bootstrap-datepicker.ja.min.js"></script>
+    <script>
+	$('#sample1').datepicker();
+    </script>
    
 
 </body>
